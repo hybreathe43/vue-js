@@ -42,9 +42,12 @@ const prntName=()=>{
 // setTimeout(() => {
 //   lastName.value="sahil"
 // }, 2000);
+const stu =ref(['sahil',"mubeen","azeem bi"]);
 </script>
 
 <template>
+  <!-- <h1 v-for="(s,i) in stu" :key="i">{{s}}</h1> -->
+  <!-- <h1 v-for="n in 5" :key="n">{{n}}</h1> -->
   <div>
     <h1 v-show="false" >hello</h1>
     <!--  {{prntName() }}<br/>
