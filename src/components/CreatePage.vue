@@ -2,7 +2,7 @@
 <div>
     
   <label for="fname">Page title</label><br>
-  <input type="text" v-model="v1"  ><br>
+  <input type="text" v-model.trim="v1"  ><br>
   <label for="lname">Content</label><br>
   <input type="text" v-model="v2"><br><br>
   <button @click.prevent="pageCreated" :disabled="computedValue">Submit</button>
@@ -12,11 +12,11 @@
 </template>
 <script setup>
 import { ref,computed  } from "vue";
-let v1 = ref(" ");
-let v2 = ref(" ");
+let v1 = ref("");
+let v2 = ref("");
 function pageCreated(){
-    if(!v1){
-  alert("FILL FORM",v1);
+    if(!v1.value){
+        alert("FILL FORM",v1);
         return;
     }
 
